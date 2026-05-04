@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenePlanet Network Visualization</title>
+    <style>
+        /* Set a dark theme background to make the gene network pop visually */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #111; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        /* Container for the video to handle responsive sizing and cinematic shadow */
+        .video-container {
+            width: 90%;
+            max-width: 1400px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8); 
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #000;
+        }
+        
+        /* Ensure the video scales perfectly within its container */
+        video {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay loop muted playsinline controls>
+            <source src="GenePlanet.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</body>
+</html>
