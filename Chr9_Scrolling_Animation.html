@@ -12,19 +12,21 @@
         button:hover { opacity: 0.8; }
         .legend { font-size: 15px; color: #ddd; line-height: 1.6; border-left: 3px solid #555; padding-left: 15px; }
         .magenta-text { color: #FF00FF; font-weight: bold; }
+        .orange-text { color: #FFA500; font-weight: bold; }
         .yellow-text { color: #FFFF00; font-weight: bold; }
     </style>
 </head>
 <body>
     <div class="container">
-        <video id="dataVideo" controls loop muted playsinline>
+        <video id="dataVideo" controls muted playsinline>
             <source src="Chr9_Scrolling_Animation.mp4" type="video/mp4">
         </video>
         <div class="controls">
             <button id="playBtn">Play Animation & Enable Sound</button>
             <div class="legend">
                 <span class="magenta-text">■</span> Global Bonferroni Threshold: <b>7.0214</b><br>
-                <span class="yellow-text">■</span> Suggestive Threshold: <b>5.7204</b>
+                <span class="orange-text">■</span> Suggestive Threshold: <b>5.7204</b><br>
+                <span class="yellow-text">■</span> Cohort Separator
             </div>
         </div>
     </div>
@@ -35,7 +37,7 @@
         const playBtn = document.getElementById("playBtn");
         
         // These placeholders (%s and %d) MUST exist for sprintf to work
-        const triggerFrames = new Set([1,38,52,70,122]);
+        const triggerFrames = new Set([1,92,128,173,302]);
         const fps = 30;
         let audioCtx;
         
