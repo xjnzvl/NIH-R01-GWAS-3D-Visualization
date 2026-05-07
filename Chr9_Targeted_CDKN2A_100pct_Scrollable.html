@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chromosome #9 Targeted View</title>
+    <style>
+        body { background-color: black; margin: 0; padding: 0; overflow-y: hidden; }
+        .scroll-container { width: 100vw; height: 100vh; overflow-x: auto; overflow-y: hidden; white-space: nowrap; }
+        img { height: 100vh; width: auto; max-width: none; display: block; }
+    </style>
+</head>
+<body>
+    <div class="scroll-container" id="plotContainer">
+        <img src="Chr9_Targeted_CDKN2A_100pct.png" alt="Chromosome Plot" id="plotImage">
+    </div>
+    
+    <script>
+         window.onload = function() {
+            var container = document.getElementById("plotContainer");
+            var targetRatio = 0.277350;
+            var targetPixel = container.scrollWidth * targetRatio;
+            var centerPosition = targetPixel - (container.clientWidth / 2);
+            container.scrollLeft = centerPosition;
+        };
+    </script>
+</body>
+</html>
